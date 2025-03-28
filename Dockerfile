@@ -38,7 +38,7 @@ COPY ./php.ini /usr/local/etc/php/php.ini
 # If you need to fix ssl
 COPY ./openssl.cnf /etc/ssl/openssl.cnf
 
-COPY composer.json composer.lock ./
+#COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 COPY . .
