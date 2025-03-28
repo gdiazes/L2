@@ -29,6 +29,12 @@ RUN mkdir -p /home/$user/.composer && \
 
 WORKDIR /var/www
 
+
+# If you need to fix ssl
+COPY ./openssl.cnf /etc/ssl/openssl.cnf
+# If you need add extension
+COPY ./php.ini /usr/local/etc/php/php.ini
+
 # If you need to fix ssl
 COPY ./openssl.cnf /etc/ssl/openssl.cnf
 
